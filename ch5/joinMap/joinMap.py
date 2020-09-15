@@ -32,6 +32,7 @@ with open('pose.txt', 'r') as f:
         trans = quaternion.translation(position)
     # pose matrix
         # T =  trans * R  # wrong multiplication, should use dot
+        
         T = np.dot(trans, R)
         pose.append(T)
 
